@@ -14,11 +14,13 @@ namespace TinkoffConnector.History
     public class StockHistoryRepository : IStockHistoryRepository
     {
         public List<string> Currencies;
-        public Dictionary<string, List<string>> Tickers;
+        private Dictionary<string, List<string>> _tickers;
         private string _rootFolderPath = "StockDatabase";
         private object _locker = new object();
         private Dictionary<string, IEnumerable<CandleModel>> _fileReadBuffer;
         private bool _isCachedMode;
+
+        public Dictionary<string, List<string>> Tickers { get { return _tickers; } }
 
         /// <summary>
         /// Start Repository instance in cached mode with all currencies data preloaded. Note initialization can takes time to init cache.
@@ -41,7 +43,7 @@ namespace TinkoffConnector.History
         {
             _rootFolderPath = dbFolderPath;
             Currencies = new List<string>();
-            Tickers = new Dictionary<string, List<string>>();
+            _tickers = new Dictionary<string, List<string>>();
             _fileReadBuffer = new Dictionary<string, IEnumerable<CandleModel>>();
             var currenciesDir = Directory.GetDirectories(_rootFolderPath, "*", SearchOption.TopDirectoryOnly);
             foreach (string currencyDir in currenciesDir)
@@ -50,7 +52,7 @@ namespace TinkoffConnector.History
                     continue;
                 var currency = currencyDir.Split('\\').Last();
                 Currencies.Add(currency);
-                Tickers.Add(currency, new List<string>());
+                _tickers.Add(currency, new List<string>());
                 foreach (string tickerDir in Directory.GetFiles(currencyDir))
                 {
                     if (tickerDir.Contains("AnalyzerCalculations"))
@@ -76,7 +78,7 @@ namespace TinkoffConnector.History
             if (to < from)
                 throw new Exception("Date FROM cannot be greater then date TO");
             var fullHistory = GetStockHistory(currency, ticker, from, to);
-            return ProcessInterval(fullHistory, interval);
+            return Helpers.ProcessInterval(fullHistory, interval.ToEnum<CandleIntervals>());
         }
 
         public decimal GetLastPriceForInstrument(string currency, string ticker)
@@ -186,7 +188,7 @@ namespace TinkoffConnector.History
                 {
                     candles = CutCandlesByDate(from, to, candles);
                     if (interval.HasValue)
-                        candles = ProcessInterval(candles, interval.ToString());
+                        candles = Helpers.ProcessInterval(candles, interval.Value);
                 }
                 _fileReadBuffer.Add(filePath, candles);
             }
@@ -250,76 +252,6 @@ namespace TinkoffConnector.History
                 Volume = decimal.Parse(csvValues[7], CultureInfo.InvariantCulture),
                 Interval = csvValues[8]
             };
-        }
-
-        private IEnumerable<CandleModel> ProcessInterval(IEnumerable<CandleModel> candles, string candleInterval)
-        {
-            switch (candleInterval)
-            {
-                case "Minute":
-                    return candles;
-                case "TwoMinutes":
-                    return ConcatCandlesByMinutes(candles, 2, candleInterval);
-                case "ThreeMinutes":
-                    return ConcatCandlesByMinutes(candles, 3, candleInterval);
-                case "FiveMinutes":
-                    return ConcatCandlesByMinutes(candles, 5, candleInterval);
-                case "TenMinutes":
-                    return ConcatCandlesByMinutes(candles, 10, candleInterval);
-                case "QuarterHour":
-                    return ConcatCandlesByMinutes(candles, 20, candleInterval);
-                case "HalfHour":
-                    return ConcatCandlesByMinutes(candles, 30, candleInterval);
-                case "Hour":
-                    return ConcatCandlesByMinutes(candles, 60, candleInterval);
-                case "Day":
-                    return ConcatCandlesByMinutes(candles, 0, candleInterval);
-                case "Week":
-                    return ConcatCandlesByMinutes(candles, 0, candleInterval);
-                case "Month":
-                    return ConcatCandlesByMinutes(candles, 0, candleInterval);
-            }
-            throw new Exception("Unfamiliar type of candle interval");
-        }
-
-        private IEnumerable<CandleModel> ConcatCandlesByMinutes(IEnumerable<CandleModel> inp_candles, int minutesAmount, string candleInterval)
-        {
-            var processedCandles = new List<CandleModel>();
-            var candles = inp_candles.ToArray();
-            for (var i = 0; i < candles.Length;)
-            {
-                var firstCandle = candles[i];
-                var resultCandle = CandleModel.Clone(firstCandle);
-                var endCandleTime = firstCandle.Time.AddMinutes(minutesAmount);
-                if (candleInterval == "Day")
-                    endCandleTime = firstCandle.Time.AddDays(1);
-                else if (candleInterval == "Week")
-                    endCandleTime = firstCandle.Time.AddDays(7);
-                else if (candleInterval == "Month")
-                    endCandleTime = firstCandle.Time.AddMonths(1);
-                var timeCounter = resultCandle.Time;
-                while (timeCounter < endCandleTime)
-                {
-                    i++;
-                    if (i >= candles.Length)
-                        break;
-                    var candle = candles[i];
-                    {
-                        resultCandle.Close = candle.Close;
-                        resultCandle.High = resultCandle.High > candle.High ? resultCandle.High : candle.High;
-                        resultCandle.Low = resultCandle.Low < candle.Low ? resultCandle.Low : candle.Low;
-                        resultCandle.Volume += candle.Volume;
-                    }
-                    i++;
-                    if (i >= candles.Length)
-                        break;
-                    timeCounter = candles[i].Time;
-                }
-                resultCandle.Interval = candleInterval;
-                resultCandle.AveragePrice = (resultCandle.High + resultCandle.Low) / 2;
-                processedCandles.Add(resultCandle);
-            }
-            return processedCandles;
         }
     }
 }

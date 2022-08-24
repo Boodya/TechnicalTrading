@@ -8,6 +8,7 @@ using TinkoffConnector.History;
 using System.Threading;
 using TinkoffConnector.Model;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace StockHistoryExporter
 {
@@ -15,7 +16,7 @@ namespace StockHistoryExporter
     {
         private int totalUpdatedHistoryCounter = 0;
         private SandboxConnector _connector;
-        private StockHistoryRepository _history;
+        private IStockHistoryRepository _history;
         private List<Currency> _availableCurrencies = new List<Currency>()
         {
             Currency.Rub,
@@ -29,9 +30,26 @@ namespace StockHistoryExporter
 
         }
 
+        public void MigrateDataToDBFromFileHistory()
+        {
+            _history = new LiteDBHistoryRepository(
+                            StartupSettings.AppSettings.StockDatabasePath);
+            var dbHistory = new LiteDBHistoryRepository(
+                "C:\\Virtual CD\\MyProjects\\StockDatabase\\MarketCandlesDB");
+            var total = _history.Tickers["Rub"];
+            var indx = 1;
+            foreach (var ticker in _history.Tickers["Rub"])
+            {
+                WriteOutput($"Migrating {ticker} ({indx}/{total.Count})...");
+                dbHistory.SaveHistory("Rub", ticker,
+                    _history.GetStockHistory("Rub", ticker).ToList());
+                indx++;
+            }
+        }
+
         public void ExportToLocalDatabaseAsync(DateTime dateFrom, DateTime dateTo)
         {
-            _history = new StockHistoryRepository(
+            _history = new LiteDBHistoryRepository(
                 StartupSettings.AppSettings.StockDatabasePath);
             var downloadTask = DownloadHistoricalDataForStocks(dateFrom, dateTo);
             downloadTask.Wait();

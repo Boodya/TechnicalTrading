@@ -6,9 +6,8 @@ namespace TinkoffConnector.History
 {
     public interface IStockHistoryRepository
     {
-        IEnumerable<CandleModel> GetStockHistory(string currency, string ticker, DateTime from, DateTime to, string interval);
+        Dictionary<string, List<string>> Tickers { get; }
         DateTime GetLastNoteTimeForStock(string currency, string ticker);
-        string GenerateStockHistoryCsv(List<CandleModel> candles, bool generateHeader);
         bool CheckHistoryExist(string currency, string ticker);
         string SaveHistory(string currency, string stockTitle, List<CandleModel> candles,
             string specialPath = "", bool isOverwrite = false);

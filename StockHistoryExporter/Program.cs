@@ -11,7 +11,8 @@ namespace StockHistoryExporter
             {
                 Console.WriteLine(message);
             });
-            processor.ExportToLocalDatabaseAsync(new DateTime(2015, 01, 01, 00, 00, 00), DateTime.Now);
+            processor.ExportToLocalDatabaseAsync(DateTime.Now.AddMonths(-6), DateTime.Now);
+            //processor.MigrateDataToDBFromFileHistory();
         }
     }
 }

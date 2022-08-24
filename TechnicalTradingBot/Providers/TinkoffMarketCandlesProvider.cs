@@ -11,7 +11,7 @@ namespace TechnicalTradingBot.Providers
 {
     public class TinkoffMarketCandlesProvider : ICandleProvider
     {
-        protected StockHistoryRepository _history;
+        protected IStockHistoryRepository _history;
         protected Dictionary<string, List<Action<CandlesUpdateModel>>> _subscribers;
         protected readonly object _locker = new object();
         protected Dictionary<string, List<TickerData>> _tickersBuff;
@@ -22,7 +22,7 @@ namespace TechnicalTradingBot.Providers
 
         public TinkoffMarketCandlesProvider(IExecutionOrchestrator dtProvider, string currency)
         {
-            _history = new StockHistoryRepository(
+            _history = new LiteDBHistoryRepository(
                 StartupSettings.AppSettings.StockDatabasePath);
             _subscribers = new Dictionary<string, List<Action<CandlesUpdateModel>>>();
             _tickersBuff = new Dictionary<string, List<TickerData>>();

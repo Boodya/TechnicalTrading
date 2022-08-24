@@ -25,7 +25,7 @@ namespace TinkoffConnector.Repositories
     {
         private IContext _context;
         private string _accountId;
-        private StockHistoryRepository _historyData;
+        private IStockHistoryRepository _historyData;
 
         public CandlesRepository(IContext context, string accountId)
         {
@@ -40,7 +40,7 @@ namespace TinkoffConnector.Repositories
                 throw new Exception("Unable to Initialize repo: Empty account ID.");
             this._context = context;
             this._accountId = accountId;
-            _historyData = new StockHistoryRepository(
+            _historyData = new LiteDBHistoryRepository(
                 StartupSettings.AppSettings.StockDatabasePath);
         }
         
@@ -54,7 +54,7 @@ namespace TinkoffConnector.Repositories
                 {
                     return _historyData.GetStockHistory(instrument.Currency.ToString(),
                         instrument.Ticker, from, to,
-                        actualInterval.ToString()).ToList();
+                        actualInterval.ToString().ToEnum<CandleIntervals>()).ToList();
                 }
             }
             var obj = await _context.MarketCandlesAsync(instrument.Figi, from, to, actualInterval);

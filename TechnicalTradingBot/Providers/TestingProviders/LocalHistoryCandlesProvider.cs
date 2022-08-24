@@ -21,7 +21,7 @@ namespace TechnicalTradingBot.Providers
         {
             return Mapper.ToTickerData(_history.GetStockHistory(_currency, ticker,
                     dateFrom, dateTo,
-                    CandleIntervals.FiveMinutes.ToString()))
+                    CandleIntervals.FiveMinutes.ToString().ToEnum<CandleIntervals>()))
                     .OrderBy(c => c.Date).ToList();
         }
 
@@ -29,7 +29,7 @@ namespace TechnicalTradingBot.Providers
         {
             var lastCandle = _history.GetStockHistory(_currency, ticker,
                      _lastRequestOperationDate.AddDays(-10), _lastRequestOperationDate,
-                     CandleIntervals.Day.ToString()).LastOrDefault();
+                     CandleIntervals.Day.ToString().ToEnum<CandleIntervals>()).LastOrDefault();
             return lastCandle?.Close;
         }
     }

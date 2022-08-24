@@ -11,8 +11,8 @@ namespace StockMarketAnalyzer
             {
                 Console.WriteLine(message);
             });
-            //processor.StartFullProcessing(DateTime.Now.AddMonths(-1), DateTime.Now);
-            processor.RecalculateTradingIndicators(DateTime.Now);
+            processor.StartFullProcessing(DateTime.Now.AddMonths(-1), DateTime.Now);
+            //processor.RecalculateTradingIndicators(DateTime.Now);
         }
     }
 }

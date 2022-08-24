@@ -18,7 +18,7 @@ namespace StockMarketAnalyzer
 {
     public class AnalyzersProcessor
     {
-        private  StockHistoryRepository _history;
+        private  IStockHistoryRepository _history;
         private  AnalyzerHistoryRepository _analyzingHistory;
         private  SandboxConnector _connector;
         private  readonly Currency _testingCurrency = Currency.Rub;
@@ -78,7 +78,7 @@ namespace StockMarketAnalyzer
 
         public void RecalculateTradingIndicators(DateTime dateTo)
         {
-            var history = new StockHistoryRepository(StartupSettings.AppSettings.StockDatabasePath);
+            var history = new LiteDBHistoryRepository(StartupSettings.AppSettings.StockDatabasePath);
             var analyzingHistory = new AnalyzerHistoryRepository(StartupSettings.AppSettings.StockDatabasePath);
             var analyzersHub = new AnalyzersHub();
             var tradingFilePath = Path.Combine(StartupSettings
@@ -115,13 +115,7 @@ namespace StockMarketAnalyzer
         {
             WriteOutput("Preparing all data to simulation...");
 
-            _history = isCachedMode ? new StockHistoryRepository(
-                StartupSettings.AppSettings.StockDatabasePath,
-                dateFrom, dateTo,
-                _testingCurrency.ToString(),
-                CandleIntervals.FiveMinutes) :
-                new StockHistoryRepository(StartupSettings.AppSettings.StockDatabasePath);
-
+            _history = new LiteDBHistoryRepository(StartupSettings.AppSettings.StockDatabasePath);
             _analyzingHistory = new AnalyzerHistoryRepository(
                 StartupSettings.AppSettings.StockDatabasePath);
         }
@@ -148,7 +142,7 @@ namespace StockMarketAnalyzer
             return tradingResults;
         }
 
-        private TradingSimulationResults SimulateHistoryTrading(string instrumentTicker, IMarketAnalyzer analyzer, StockHistoryRepository candlesRepo,
+        private TradingSimulationResults SimulateHistoryTrading(string instrumentTicker, IMarketAnalyzer analyzer, IStockHistoryRepository candlesRepo,
             DateTime startDate, DateTime endDate)
         {
 
@@ -167,7 +161,8 @@ namespace StockMarketAnalyzer
             result.TradingSimulationEndDateTime = endDate;
 
             var history = Mapper.ToTickerData(candlesRepo.GetStockHistory(_testingCurrency.ToString(), instrumentTicker,
-                    result.TradingSimulationStartDateTime, result.TradingSimulationEndDateTime, result.TimeFrame));
+                    result.TradingSimulationStartDateTime, result.TradingSimulationEndDateTime,
+                    result.TimeFrame.ToEnum<CandleIntervals>()));
             var decision = analyzer.Analyze(history);
 
             decimal openPositionPrice = 0;
