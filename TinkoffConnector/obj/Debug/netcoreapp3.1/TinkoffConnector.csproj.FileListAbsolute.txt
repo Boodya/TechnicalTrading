@@ -1,0 +1,16 @@
+C:\Virtual CD\MyProjects\TradeBot\TradeBot\TinkoffConnector\bin\Debug\netcoreapp3.1\TinkoffConnector.deps.json
+C:\Virtual CD\MyProjects\TradeBot\TradeBot\TinkoffConnector\bin\Debug\netcoreapp3.1\TinkoffConnector.dll
+C:\Virtual CD\MyProjects\TradeBot\TradeBot\TinkoffConnector\obj\Debug\netcoreapp3.1\TinkoffConnector.AssemblyInfoInputs.cache
+C:\Virtual CD\MyProjects\TradeBot\TradeBot\TinkoffConnector\obj\Debug\netcoreapp3.1\TinkoffConnector.AssemblyInfo.cs
+C:\Virtual CD\MyProjects\TradeBot\TradeBot\TinkoffConnector\bin\Debug\netcoreapp3.1\TinkoffConnector.pdb
+C:\Virtual CD\MyProjects\TradeBot\TradeBot\TinkoffConnector\obj\Debug\netcoreapp3.1\TinkoffConnector.csprojAssemblyReference.cache
+C:\Virtual CD\MyProjects\TradeBot\TradeBot\TinkoffConnector\obj\Debug\netcoreapp3.1\TinkoffConnector.dll
+C:\Virtual CD\MyProjects\TradeBot\TradeBot\TinkoffConnector\obj\Debug\netcoreapp3.1\TinkoffConnector.pdb
+C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\bin\Debug\netcoreapp3.1\TinkoffConnector.deps.json
+C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\bin\Debug\netcoreapp3.1\TinkoffConnector.dll
+C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\bin\Debug\netcoreapp3.1\TinkoffConnector.pdb
+C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\obj\Debug\netcoreapp3.1\TinkoffConnector.csprojAssemblyReference.cache
+C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\obj\Debug\netcoreapp3.1\TinkoffConnector.AssemblyInfoInputs.cache
+C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\obj\Debug\netcoreapp3.1\TinkoffConnector.AssemblyInfo.cs
+C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\obj\Debug\netcoreapp3.1\TinkoffConnector.dll
+C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\obj\Debug\netcoreapp3.1\TinkoffConnector.pdb

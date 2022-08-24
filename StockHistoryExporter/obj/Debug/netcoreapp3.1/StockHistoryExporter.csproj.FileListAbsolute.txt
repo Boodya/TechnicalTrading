@@ -1,0 +1,4 @@
+C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\bin\Debug\netcoreapp3.1\StockHistoryExporter.exe
+C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\obj\Debug\netcoreapp3.1\StockHistoryExporter.AssemblyInfoInputs.cache
+C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\obj\Debug\netcoreapp3.1\StockHistoryExporter.AssemblyInfo.cs
+C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\obj\Debug\netcoreapp3.1\StockHistoryExporter.csprojAssemblyReference.cache

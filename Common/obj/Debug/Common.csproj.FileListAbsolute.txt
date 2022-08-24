@@ -1,0 +1,6 @@
+C:\Virtual CD\MyProjects\TechnicalTrading\Common\bin\Debug\Common.dll
+C:\Virtual CD\MyProjects\TechnicalTrading\Common\bin\Debug\Common.pdb
+C:\Virtual CD\MyProjects\TechnicalTrading\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+C:\Virtual CD\MyProjects\TechnicalTrading\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Virtual CD\MyProjects\TechnicalTrading\Common\obj\Debug\Common.dll
+C:\Virtual CD\MyProjects\TechnicalTrading\Common\obj\Debug\Common.pdb

@@ -1,0 +1,5 @@
+C:\Virtual CD\MyProjects\TradingBot\StockMarketAnalyzer\obj\Debug\netcoreapp3.1\StockMarketAnalyzer.csproj.AssemblyReference.cache
+C:\Virtual CD\MyProjects\TradingBot\StockMarketAnalyzer\obj\Debug\netcoreapp3.1\StockMarketAnalyzer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Virtual CD\MyProjects\TradingBot\StockMarketAnalyzer\obj\Debug\netcoreapp3.1\StockMarketAnalyzer.AssemblyInfoInputs.cache
+C:\Virtual CD\MyProjects\TradingBot\StockMarketAnalyzer\obj\Debug\netcoreapp3.1\StockMarketAnalyzer.AssemblyInfo.cs
+C:\Virtual CD\MyProjects\TradingBot\StockMarketAnalyzer\obj\Debug\netcoreapp3.1\StockMarketAnalyzer.csproj.CoreCompileInputs.cache

@@ -1,0 +1,160 @@
+8/9/2022 11:52:38 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:52:49 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:52:59 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:53:09 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:53:21 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:53:41 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:53:55 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:54:08 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:54:22 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:54:35 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:54:48 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:55:01 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:55:16 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:55:29 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:55:41 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:55:53 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:56:06 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:56:18 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:56:31 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:56:43 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:56:56 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:57:48 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:58:00 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:58:23 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:58:35 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:58:47 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:59:00 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:59:12 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:59:25 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:59:38 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 11:59:51 AM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95
+8/9/2022 12:00:05 PM,TooManyRequests: Too many requests..,   at Tinkoff.Trading.OpenApi.Network.Connection`1.HandleResponseAsync[TOut](HttpResponseMessage response)
+   at Tinkoff.Trading.OpenApi.Network.Connection`1.SendGetRequestAsync[TPayload](String path)
+   at Tinkoff.Trading.OpenApi.Network.Context.MarketCandlesAsync(String figi, DateTime from, DateTime to, CandleInterval interval)
+   at TinkoffConnector.Repositories.CandlesRepository.GetInstrumentCandles(MarketInstrument instrument, DateTime from, DateTime to, Nullable`1 interval, Boolean isUseHistory) in C:\Virtual CD\MyProjects\TradingBot\TinkoffConnector\Repositories\CandlesRepository.cs:line 60
+   at StockHistoryExporter.Program.LoadInstrumentCandlesToHistory(MarketInstrument stock, Currency currency, DateTime dateStart, DateTime dateStop) in C:\Virtual CD\MyProjects\TradingBot\StockHistoryExporter\Program.cs:line 95

@@ -1,0 +1,56 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c29a8e12-315b-4254-a01d-c88d1f503fe4": {
+      "ProjectGuid": "c29a8e12-315b-4254-a01d-c88d1f503fe4",
+      "DisplayName": "TechnicalTradingBot",
+      "ColorIndex": 0
+    },
+    "d3858dfd-1519-4a94-b13f-a01154e7f706": {
+      "ProjectGuid": "d3858dfd-1519-4a94-b13f-a01154e7f706",
+      "DisplayName": "TinkoffConnector",
+      "ColorIndex": 1
+    },
+    "a1bb8595-540f-484b-b5bf-376c4e39eca7": {
+      "ProjectGuid": "a1bb8595-540f-484b-b5bf-376c4e39eca7",
+      "DisplayName": "OoplesFinance.StockIndicators",
+      "ColorIndex": 2
+    },
+    "f618732c-42de-4e37-a4f5-4fc79da25035": {
+      "ProjectGuid": "f618732c-42de-4e37-a4f5-4fc79da25035",
+      "DisplayName": "StockHistoryExporter",
+      "ColorIndex": 3
+    },
+    "95a52e48-320a-41a3-b763-29be71b680db": {
+      "ProjectGuid": "95a52e48-320a-41a3-b763-29be71b680db",
+      "DisplayName": "StockMarketAnalyzer",
+      "ColorIndex": 4
+    },
+    "e6617112-4867-4c4f-ad56-988db4da5590": {
+      "ProjectGuid": "e6617112-4867-4c4f-ad56-988db4da5590",
+      "DisplayName": "TinkoffConnector",
+      "ColorIndex": 5
+    },
+    "798cb97f-9474-4ad8-a3a6-1075fa06b696": {
+      "ProjectGuid": "798cb97f-9474-4ad8-a3a6-1075fa06b696",
+      "DisplayName": "Common",
+      "ColorIndex": 6
+    },
+    "cbdb6062-a73d-4a3a-a905-fae8eaa73c0d": {
+      "ProjectGuid": "cbdb6062-a73d-4a3a-a905-fae8eaa73c0d",
+      "DisplayName": "OoplesFinance.StockIndicators",
+      "ColorIndex": 7
+    },
+    "3f459ab4-244d-4b3d-84d5-071fcee4c176": {
+      "ProjectGuid": "3f459ab4-244d-4b3d-84d5-071fcee4c176",
+      "DisplayName": "TechnicalTradingBotTests",
+      "ColorIndex": 8
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 9
+}
