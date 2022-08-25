@@ -1,9 +1,12 @@
-﻿using System;
+﻿using LiteDB;
+using System;
 
 namespace TinkoffConnector.Model
 {
     public class CandleModel
     {
+        [BsonId]
+        public ObjectId Id { get; set; }
         public decimal Open { get; set; }
         public decimal Close { get; set; }
         public decimal High { get; set; }

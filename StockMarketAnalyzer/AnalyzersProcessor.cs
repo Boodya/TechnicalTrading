@@ -61,7 +61,7 @@ namespace StockMarketAnalyzer
                 }
                 else continue;
             }
-            _analyzingHistory.SaveAnalyzerResults(_testingCurrency.ToString(), results);
+            _analyzingHistory.SaveAnalyzerResults(results);
             SaveTradingResultsFromSimulation(results);
         }
 
@@ -71,22 +71,18 @@ namespace StockMarketAnalyzer
                 || r.LastDecision == Signal.StrongBuy.ToString())
                 .OrderByDescending(r => r.TradingResultInPercent)
                 .Take(10).ToList();
-            var tradingFilePath = Path.Combine(StartupSettings
-                .AppSettings.StockDatabasePath, "Trading", "TradingIndicators.csv");
-            _analyzingHistory.SaveAnalyzerResults(_testingCurrency.ToString(), tradingResults, tradingFilePath);
+            _analyzingHistory.SaveAnalyzerResults(tradingResults);
         }
 
-        public void RecalculateTradingIndicators(DateTime dateTo)
+        public void RecalculateTradingIndicators(DateTime dateTo, DateTime? dateFrom=null)
         {
             var history = new LiteDBHistoryRepository(StartupSettings.AppSettings.StockDatabasePath);
             var analyzingHistory = new AnalyzerHistoryRepository(StartupSettings.AppSettings.StockDatabasePath);
             var analyzersHub = new AnalyzersHub();
-            var tradingFilePath = Path.Combine(StartupSettings
-                .AppSettings.StockDatabasePath, "Trading", "TradingIndicators.csv");
-            var previousResults = analyzingHistory.LoadSimulationResults(_testingCurrency.ToString(), tradingFilePath);
+            var previousResults = analyzingHistory.LoadSimulationResults();
             
             var dtNow = dateTo;
-            var startDt = dtNow.AddMonths(-1);
+            var startDt = dateFrom ?? dtNow.AddMonths(-1);
             List<TradingSimulationResults> results = new List<TradingSimulationResults>();
             previousResults.ForEach(r =>
             {
@@ -95,7 +91,7 @@ namespace StockMarketAnalyzer
                     history, startDt, dtNow);
                 results.Add(result);
             });
-            analyzingHistory.SaveAnalyzerResults(_testingCurrency.ToString(), results, tradingFilePath);
+            analyzingHistory.SaveAnalyzerResults(results);
         }
 
         public void SubscribeOnOutputMessage(Action<string> subscription)

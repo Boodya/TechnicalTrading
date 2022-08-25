@@ -1,121 +1,58 @@
-﻿using StockMarketAnalyzer.Models;
+﻿using LiteDB;
+using StockMarketAnalyzer.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using TinkoffConnector.Model;
 
 namespace StockMarketAnalyzer.History
 {
     public class AnalyzerHistoryRepository
     {
-        private readonly string _rootFolderPath = "StockDatabase";
-        private readonly string _calculationCsvName = "AnalyzerCalculations.csv";
+        private readonly string _stockHistoryDBPath = "StockDatabase";
+        private readonly string _tableName = "TradingSimulationResults";
 
         public AnalyzerHistoryRepository(string stockHistoryFolderPath)
         {
-            _rootFolderPath = stockHistoryFolderPath;
+            _stockHistoryDBPath = stockHistoryFolderPath;
         }
 
-        public void SaveAnalyzerResults(string currency, List<TradingSimulationResults> results, string filePath = null)
+        public void SaveAnalyzerResults(List<TradingSimulationResults> results)
         {
-            if (results == null || results.Count == 0)
-                return;
-            var fullFilePath = filePath ?? Path.Combine(_rootFolderPath, currency, _calculationCsvName);
-            var textContent = GenerateCsvContent(results);
-            if (!string.IsNullOrEmpty(textContent))
+            using (var db = new LiteDatabase(_stockHistoryDBPath))
             {
-                File.WriteAllText(fullFilePath, textContent);
-            }
-        }
+                var col = db.GetCollection<TradingSimulationResults>(_tableName);
+                col.EnsureIndex(x => x.UniqId, true);
 
-        public void SaveAnalyzerResults(string currency, TradingSimulationResults results, string filePath = null)
-        {
-            if (results == null)
-                return;
-            var fullFilePath = filePath ?? Path.Combine(_rootFolderPath, currency, _calculationCsvName);
-            var resultNotes = new List<TradingSimulationResults>();
-            if(File.Exists(fullFilePath))
-            {
-                resultNotes = LoadSimulationResults(currency);
-            }
-            var existingResult = resultNotes.Where(r => r.AnalyzerType == results.AnalyzerType 
-                && r.InstrumentTicker == results.InstrumentTicker).FirstOrDefault();
-            if (existingResult != null)
-            {
-                resultNotes.Remove(existingResult);
-            }
-            resultNotes.Add(results);
-            resultNotes = resultNotes.OrderByDescending(r => r.TotalSuccessTradesConversionPercent).ToList();
-            var textContent = GenerateCsvContent(resultNotes);
-            if (!string.IsNullOrEmpty(textContent))
-            {
-                File.WriteAllText(fullFilePath, textContent);
-            }
-        }
-
-        public List<TradingSimulationResults> LoadSimulationResults(string currency, string filePath = null)
-        {
-            var results = new List<TradingSimulationResults>();
-            var fullFilePath = filePath ?? Path.Combine(_rootFolderPath, currency, _calculationCsvName);
-            if (!File.Exists(fullFilePath))
-                return results;
-            using (var reader = new StreamReader(File.OpenRead(fullFilePath)))
-            {
-                while (!reader.EndOfStream)
+                results.ForEach(result =>
                 {
-                    var line = reader.ReadLine();
-                    var values = line.Split(',');
-                    if (values[0] == "InstrumentTicker")
-                        continue;
-
-                    try
+                    var existingItem = col
+                        .Find(dbCandle => dbCandle.UniqId == result.UniqId)
+                        .FirstOrDefault();
+                    if (existingItem != null)
                     {
-                        results.Add(new TradingSimulationResults()
-                        {
-                            InstrumentTicker = values[0],
-                            //values[1] skipped
-                            TradingStartBalance = decimal.Parse(values[2]),
-                            TradingResultBalance = decimal.Parse(values[3]),
-                            TradingSimulationStartDateTime = DateTime.Parse(values[4]),
-                            TradingSimulationEndDateTime = DateTime.Parse(values[5]),
-                            TotalTrades = int.Parse(values[6]),
-                            AnalyzerType = values[7],
-                            TimeFrame = values[8],
-                            TotalSuccessfulTrades = int.Parse(values[9]),
-                            AverageHoursStayedInDeal = double.Parse(values[10]),
-                            TotalSuccessTradesConversionPercent = double.Parse(values[11]),
-                            LastDecision = values[12],
-                        });
+                        result.Id = existingItem.Id;
+                        col.Update(result);
                     }
-                    catch (Exception ex)
-                    {
-                        throw;
-                    }
-                }
+                    else col.Insert(result);     
+                });
             }
-            return results;
         }
 
-        private string GenerateCsvContent(List<TradingSimulationResults> results, bool generateHeader = true)
+        public List<TradingSimulationResults> LoadSimulationResults()
         {
-            if (results.Count == 0)
-                return string.Empty;
-            StringBuilder csv = new StringBuilder();
-            if (generateHeader)
+            using (var db = new LiteDatabase(_stockHistoryDBPath))
             {
-                csv.AppendLine("InstrumentTicker,TradingResultInPercent,TradingStartBalance," +
-                    "TradingResultBalance,TradingSimulationStartDateTime,TradingSimulationEndDateTime," +
-                    "TotalTrades,AnalyzerType,TimeFrame,TotalSuccessfulTrades,AverageHoursStayedInDeal," +
-                    "TotalSuccessTradesConversionPercent,LastDecision");
+                if (!db.CollectionExists(_tableName))
+                    return new List<TradingSimulationResults>();
+
+                var col = db.GetCollection<TradingSimulationResults>(_tableName);
+                return col.FindAll()
+                    .OrderByDescending(r => r.TradingResultInPercent)
+                    .ToList();
             }
-            foreach (var c in results)
-            {
-                csv.AppendLine($"{c.InstrumentTicker},{c.TradingResultInPercent},{c.TradingStartBalance},{c.TradingResultBalance}," +
-                    $"{c.TradingSimulationStartDateTime},{c.TradingSimulationEndDateTime},{c.TotalTrades},{c.AnalyzerType},{c.TimeFrame}," +
-                    $"{c.TotalSuccessfulTrades},{c.AverageHoursStayedInDeal},{c.TotalSuccessTradesConversionPercent},{c.LastDecision}");
-            }
-            return csv.ToString();
         }
     }
 }

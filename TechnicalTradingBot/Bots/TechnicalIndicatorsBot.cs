@@ -142,7 +142,7 @@ namespace TechnicalTradingBot.Bots
             }
 
             _tickerAnalyzers = new Dictionary<string, IMarketAnalyzer>();
-            _analyzerHistory.LoadSimulationResults(_settings.Currency.ToString())
+            _analyzerHistory.LoadSimulationResults()
                 .Take(_settings.InstrumentsAmountToTrade).ToList()
                 .ForEach(x =>
                 {

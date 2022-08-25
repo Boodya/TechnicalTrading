@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LiteDB;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -25,5 +26,14 @@ namespace StockMarketAnalyzer.Models
         public double AverageHoursStayedInDeal { get; set; }
         public double TotalSuccessTradesConversionPercent { get; set; }
         public string LastDecision { get; set; }
+        public string UniqId
+        {
+            get
+            {
+                return $"{InstrumentTicker}_{AnalyzerType}";
+            }
+        }
+        [BsonId]
+        public ObjectId Id { get; set; }
     }
 }
